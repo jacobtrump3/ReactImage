@@ -1,10 +1,4 @@
-img{
-    position: relative;
-    margin: 10px;
-}
-
-div {
-    background-color: white;
-    width: 140px;
-    height: 140px;
+#img-container {
+    width: 120px;
+    height: 120px;
 }

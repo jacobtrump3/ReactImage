@@ -5,10 +5,12 @@ import './index.css';
 
 var pinchZoom = require('pinch-zoom');
 
+import ImageZoom from 'react-medium-image-zoom';
+
 class Index extends React.Component {
     componentDidMount() {
         pinchZoom(
-            document.getElementById('wrapper'),
+            document.getElementById('react-img'),
             {
                 tapreset: true
             }
@@ -16,9 +18,20 @@ class Index extends React.Component {
     }
     render() {
         return (
-            <div>
-                <img id="wrapper" src="https://cdn-images-1.medium.com/fit/c/120/120/1*lKN9xV1YEin-2wfAiGySBA.png" alt="" />
-            </div>
+            <span>
+                <h1>Module: pinch-zoom</h1>
+                <div id="img-container">
+                    <img id="react-img" src="https://cdn-images-1.medium.com/fit/c/120/120/1*lKN9xV1YEin-2wfAiGySBA.png" alt="React" />
+                </div>
+                <hr />
+                <h1>Module: react-medium-image-zoom</h1>
+                <ImageZoom 
+                    image={{
+                        src: 'http://www.novasoftware.com/Images/Case-Study/JavaScript/html5.png'
+                    }}
+                />
+                <hr />
+            </span>
         );
     }
 }
