@@ -7,7 +7,10 @@ var pinchZoom = require('pinch-zoom');
 class Index extends React.Component {
     componentDidMount() {
         pinchZoom(
-            document.getElementById('wrapper')
+            document.getElementById('wrapper'),
+            {
+                maxScale: 4
+            }
         );
     }
     render() {
