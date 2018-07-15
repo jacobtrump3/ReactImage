@@ -16,7 +16,9 @@ class Index extends React.Component {
     }
     render() {
         return (
-            <img id="wrapper" src="https://cdn-images-1.medium.com/fit/c/120/120/1*lKN9xV1YEin-2wfAiGySBA.png" alt="" />
+            <div>
+                <img id="wrapper" src="https://cdn-images-1.medium.com/fit/c/120/120/1*lKN9xV1YEin-2wfAiGySBA.png" alt="" />
+            </div>
         );
     }
 }

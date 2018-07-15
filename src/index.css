@@ -1,4 +1,10 @@
 img{
     position: relative;
-    margin: 10%;
+    margin: 10px;
+}
+
+div {
+    background-color: white;
+    width: 140px;
+    height: 140px;
 }
