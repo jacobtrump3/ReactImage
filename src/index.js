@@ -10,7 +10,10 @@ import ImageZoom from 'react-medium-image-zoom';
 class Index extends React.Component {
     componentDidMount() {
         pinchZoom(
-            document.getElementById('react-img')
+            document.getElementById('react-img'),
+            {
+                tapreset : true
+            }
         );
     }
     render() {
