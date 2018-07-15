@@ -32,6 +32,7 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "pinch-zoom": "^0.3.9",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
   }

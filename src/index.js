@@ -3,12 +3,23 @@ import ReactDOM from 'react-dom';
 
 import './index.css'
 
+var pinchZoom = require('pinch-zoom');
+
 class Index extends React.Component {
-    render(){
-        return(
-            <div>
-                Hello React!
-            </div>
+    componentDidMount(){
+        pinchZoom(
+            document.getElementById('wrapper'),
+            {
+                draggable: true,
+                maxScale: 4
+            }
+        );
+    }
+    render() {
+        return (
+                <div id="wrapper">
+                    <img src="https://cdn-images-1.medium.com/fit/c/120/120/1*lKN9xV1YEin-2wfAiGySBA.png" alt="" />
+                </div>
         );
     }
 }
