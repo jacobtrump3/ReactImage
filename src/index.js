@@ -12,13 +12,6 @@ class Index extends React.Component {
         pinchZoom(
             document.getElementById('react-img')
         );
-
-        pinchZoom(
-            document.getElementById('react-img-tap'),
-            {
-                tapreset: true
-            }
-        );
     }
     render() {
         return (
@@ -28,12 +21,7 @@ class Index extends React.Component {
                     <img id="react-img" src="https://spectrum.imgix.net/communities/102b08e1-f26e-4cda-b252-03258776bc14/react.png.0.1901592707012414" alt="React" />
                 </div>
                 <hr />
-                <h2>Module: pinch-zoom (with single tap reset)</h2>
-                <div id="img-container">
-                    <img id="react-img-tap" src="https://spectrum.imgix.net/communities/102b08e1-f26e-4cda-b252-03258776bc14/react.png.0.1901592707012414" alt="React" />
-                </div>
-                <hr />
-                <h3>Module: react-medium-image-zoom</h3>
+                <h2>Module: react-medium-image-zoom</h2>
                 <ImageZoom 
                     image={{
                         src: 'https://frontendmasters.com/assets/html5css3.png'
