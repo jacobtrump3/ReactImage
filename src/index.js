@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import './index.css';
 
 var pinchZoom = require('pinch-zoom');
 
@@ -9,7 +10,8 @@ class Index extends React.Component {
         pinchZoom(
             document.getElementById('wrapper'),
             {
-                maxScale: 4
+                maxScale: 4,
+                tapreset: true
             }
         );
     }
