@@ -25,7 +25,7 @@ class Index extends React.Component {
             <span>
                 <h1>Module: pinch-zoom</h1>
                 <div id="img-container">
-                    <img id="react-img-tap" src="https://cdn-images-1.medium.com/fit/c/120/120/1*lKN9xV1YEin-2wfAiGySBA.png" alt="React" />
+                    <img id="react-img" src="https://cdn-images-1.medium.com/fit/c/120/120/1*lKN9xV1YEin-2wfAiGySBA.png" alt="React" />
                 </div>
                 <hr />
                 <h2>Module: pinch-zoom (with single tap reset)</h2>
