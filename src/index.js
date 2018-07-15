@@ -10,7 +10,7 @@ class Index extends React.Component {
         pinchZoom(
             document.getElementById('wrapper'),
             {
-                maxScale: 4,
+                maxScale: 0,
                 tapreset: true
             }
         );
