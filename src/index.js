@@ -9,7 +9,7 @@ class Index extends React.Component {
     render() {
         return (
             <span>
-                enlargedImageContainerStyle take 3
+                enlargedImageContainerStyle take 4
                 <ReactImageMagnify {...{
                     smallImage: {
                         src: 'https://spectrum.imgix.net/communities/102b08e1-f26e-4cda-b252-03258776bc14/react.png.0.1901592707012414',
@@ -21,15 +21,8 @@ class Index extends React.Component {
                         width: 760,
                         height: 760,
                     },
-                    enlargedImageContainerStyle : {
-                        width: window.innerWidth,
-                        height: window.innerHeight,
-                        margin: 0
-                    },
-                    enlargedImageContainerDimensions: {
-                        width: '200%',
-                        height: '100%'
-                    }
+                    isActivatedOnTouch : true,
+                    enlargedImagePosition: 'beside'
                 }} />
             </span>
         );
