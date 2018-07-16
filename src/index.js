@@ -14,7 +14,8 @@ class Index extends React.Component {
                         src: 'https://spectrum.imgix.net/communities/102b08e1-f26e-4cda-b252-03258776bc14/react.png.0.1901592707012414',
                         width: 240,
                         height: 240,
-                        isActivatedOnTouch: true
+                        isActivatedOnTouch: true,
+                        isEnlargedImagePortalEnabledForTouch: true
                     },
                     largeImage: {
                         src: 'https://spectrum.imgix.net/communities/102b08e1-f26e-4cda-b252-03258776bc14/react.png.0.1901592707012414',
