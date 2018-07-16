@@ -27,7 +27,7 @@ class Index extends React.Component {
                 onTap={this.handleTap.bind(this)}
             >
                 <span>
-                    enlargedImageContainerStyle take 5
+                    6
                 <div>
                         <ReactImageMagnify {...{
                             smallImage: {
@@ -39,11 +39,7 @@ class Index extends React.Component {
                                 width: window.innerWidth,
                                 height: window.innerHeight
                             },
-                            enlargedImageContainerStyle: {
-                                width: window.innerWidth,
-                                height: window.innerHeight
-                            },
-                            enlargedImageStyle: {
+                            enlargedImageContainerDimensions : {
                                 width: window.innerWidth,
                                 height: window.innerHeight
                             }
