@@ -31,28 +31,7 @@ class Index extends React.Component {
                 Touch detected: {this.state.touch ? 'true' : 'false'}<br />
                 Mouse detected: {this.state.mouse ? 'true' : 'false'}
                 <hr />
-                <h1>Module: react-medium-image-zoom</h1>
-                <ImageZoom
-                    image={{
-                        src: 'https://frontendmasters.com/assets/html5css3.png'
-                    }}
-                />
-                <hr />
-                <h2>Module: react-image-magnify</h2>
-                <ReactImageMagnify {...{
-                    smallImage: {
-                        src: 'https://spectrum.imgix.net/communities/102b08e1-f26e-4cda-b252-03258776bc14/react.png.0.1901592707012414',
-                        width: 240,
-                        height: 240
-                    },
-                    largeImage: {
-                        src: 'https://spectrum.imgix.net/communities/102b08e1-f26e-4cda-b252-03258776bc14/react.png.0.1901592707012414',
-                        width: 480,
-                        height: 480
-                    }
-                }} />
-                <hr />
-                <h3>A combination based on touch or mouse</h3>
+                <h1>A combination based on touch or mouse</h1>
                 {this.state.mouse &&
                     <ReactImageMagnify {...{
                         smallImage: {
