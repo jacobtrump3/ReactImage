@@ -34,6 +34,7 @@
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-image-magnify": "^2.7.0"
+    "react-image-magnify": "^2.7.0",
+    "react-touch-events": "^2.1.0"
   }
 }
