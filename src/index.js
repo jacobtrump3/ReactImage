@@ -7,24 +7,27 @@ import ImageZoom from 'react-medium-image-zoom';
 
 import ReactImageMagnify from 'react-image-magnify';
 
+import $ from 'jquery';
+
 class Index extends React.Component {
-    constructor(props) {
+
+    constructor(props){
         super(props);
         this.state = {
-            mouse: true,
-            touch: false
-        };
-        document.getElementById('body').addEventListener('touchstart', this.updatePage);
-    }
-
-    updatePage() {
-        this.setState({
             mouse: false,
             touch: true
-        });
-        document.getElementById('body').removeEventListener('touchstart', () => { });
+        }
     }
 
+    componentDidMount(){
+        $(document).mousemove(() => {
+            this.setState({
+                mouse: true,
+                touch: false
+            });
+            $(document).off('mousemove');
+        });
+    }
     render() {
         return (
             <span>
