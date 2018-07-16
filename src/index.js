@@ -9,13 +9,17 @@ class Index extends React.Component {
     render() {
         return (
             <span>
+                isActivatedOnTouch: true <br />
+                isEnlargedImagePortalEnabledForTouch: true<br/>
+                enlargedImagePosition: 'beside'
                 <ReactImageMagnify {...{
                     smallImage: {
                         src: 'https://spectrum.imgix.net/communities/102b08e1-f26e-4cda-b252-03258776bc14/react.png.0.1901592707012414',
                         width: 240,
                         height: 240,
                         isActivatedOnTouch: true,
-                        isEnlargedImagePortalEnabledForTouch: true
+                        isEnlargedImagePortalEnabledForTouch: true,
+                        enlargedImagePosition: 'beside'
                     },
                     largeImage: {
                         src: 'https://spectrum.imgix.net/communities/102b08e1-f26e-4cda-b252-03258776bc14/react.png.0.1901592707012414',
