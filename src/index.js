@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import ReactImageZoom from 'react-image-zoom';
+
 class Index extends React.Component {
-    render(){
-        return(
-            <div>
-                Hello React!
-            </div>
+    componentDidMount() {
+    }
+    render() {
+        return (
+            <ReactImageZoom
+                {...{
+                    width: 400,
+                    zoomWidth: 400,
+                    img: 'https://raw.githubusercontent.com/malaman/react-image-zoom/master/example/1.jpg'
+                }} />
         );
     }
 }
