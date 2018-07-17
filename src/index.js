@@ -1,19 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import ReactImageZoom from 'react-image-zoom';
+import Magnifier from 'magnifier';
 
 class Index extends React.Component {
-    componentDidMount() {
+    componentDidMount(){
+        new Magnifier('#skyline');
     }
     render() {
         return (
-            <ReactImageZoom
-                {...{
-                    width: 400,
-                    zoomWidth: 400,
-                    img: 'https://raw.githubusercontent.com/malaman/react-image-zoom/master/example/1.jpg'
-                }} />
+            <img id="skyline" style={{ width: 240, height: 240 }} src='https://raw.githubusercontent.com/malaman/react-image-zoom/master/example/1.jpg' />
         );
     }
 }
