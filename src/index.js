@@ -48,6 +48,7 @@ class Index extends React.Component {
                             image={{
                                 src: 'https://pbs.twimg.com/profile_images/827354992377860096/sUe4dG_L_400x400.jpg'
                             }}
+                            zoomMargin={0}
                         />
                     }
                 </span>
