@@ -14,14 +14,12 @@ class Index extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            mouse: true,
             touch: false
         }
     }
 
     handleTap() {
         this.setState({
-            mouse: false,
             touch: true
         });
     }
@@ -31,11 +29,7 @@ class Index extends React.Component {
                 onTap={this.handleTap.bind(this)}
             >
                 <span>
-                    Touch detected: {this.state.touch ? 'true' : 'false'}<br />
-                    Mouse detected: {this.state.mouse ? 'true' : 'false'}
-                    <hr />
-                    <h1>A combination based on touch or mouse</h1>
-                    {this.state.mouse &&
+                    {!this.state.touch &&
                         <ReactImageMagnify {...{
                             smallImage: {
                                 src: 'https://pbs.twimg.com/profile_images/827354992377860096/sUe4dG_L_400x400.jpg',
