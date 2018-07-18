@@ -11,12 +11,12 @@ class Index extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            touch: (innerWidth < 1024) ? true : false
+            touch: (innerWidth <= 1024) ? true : false
         }
     }
 
     componentDidMount() {
-        if (innerWidth < 1024) {
+        if (innerWidth <= 1024) {
             new Zooming({
                 customSize: { width: innerWidth, height: innerHeight }
             }).listen('#test');
@@ -29,19 +29,19 @@ class Index extends React.Component {
                 {!this.state.touch &&
                     <ReactImageMagnify {...{
                         smallImage: {
-                            src: 'https://pbs.twimg.com/profile_images/827354992377860096/sUe4dG_L_400x400.jpg',
+                            src: 'https://raw.githubusercontent.com/malaman/react-image-zoom/master/example/1.jpg',
                             width: 240,
                             height: 240
                         },
                         largeImage: {
-                            src: 'https://pbs.twimg.com/profile_images/827354992377860096/sUe4dG_L_400x400.jpg',
+                            src: 'https://raw.githubusercontent.com/malaman/react-image-zoom/master/example/1.jpg',
                             width: 480,
                             height: 480
                         }
                     }} />
                 }
                 {this.state.touch &&
-                    <img id="test" src="https://pbs.twimg.com/profile_images/827354992377860096/sUe4dG_L_400x400.jpg" />
+                    <img id="test" src="https://raw.githubusercontent.com/malaman/react-image-zoom/master/example/1.jpg" />
                 }
             </span>
         );
