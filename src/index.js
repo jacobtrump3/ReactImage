@@ -3,24 +3,22 @@ import ReactDOM from 'react-dom';
 
 import './index.css';
 
-import Zooming from 'zooming';
-
 import ReactImageMagnify from 'react-image-magnify';
 
 class Index extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            touch: (innerWidth <= 1024) ? true : false
+            touch: (innerWidth <= 1024) ? true : false,
+            small: true
         }
+        this.handleClick = this.handleClick.bind(this);
     }
 
-    componentDidMount() {
-        if (innerWidth <= 1024) {
-            new Zooming({
-                customSize: { width: innerWidth, height: innerHeight }
-            }).listen('#test');
-        }
+    handleClick(){
+        this.setState({
+            small: !this.state.small
+        });
     }
 
     render() {
@@ -40,8 +38,15 @@ class Index extends React.Component {
                         }
                     }} />
                 }
-                {this.state.touch &&
-                    <img id="test" src="https://www.qnap.com/solution/ifttt_agent/assets/images/app/icon_14.jpg" />
+                {
+                    this.state.touch &&
+                    this.state.small &&
+                    <img onClick={this.handleClick} src="https://www.qnap.com/solution/ifttt_agent/assets/images/app/icon_14.jpg" />
+                }
+                {
+                    this.state.touch &&
+                    !this.state.small &&
+                    <img style={{width: innerWidth, height: innerHeight}} onClick={this.handleClick} src="https://www.qnap.com/solution/ifttt_agent/assets/images/app/icon_14.jpg" />
                 }
             </span>
         );
