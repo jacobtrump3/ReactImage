@@ -29,19 +29,19 @@ class Index extends React.Component {
                 {!this.state.touch &&
                     <ReactImageMagnify {...{
                         smallImage: {
-                            src: 'https://raw.githubusercontent.com/malaman/react-image-zoom/master/example/1.jpg',
+                            src: 'https://www.qnap.com/solution/ifttt_agent/assets/images/app/icon_14.jpg',
                             width: 240,
                             height: 240
                         },
                         largeImage: {
-                            src: 'https://raw.githubusercontent.com/malaman/react-image-zoom/master/example/1.jpg',
+                            src: 'https://www.qnap.com/solution/ifttt_agent/assets/images/app/icon_14.jpg',
                             width: 480,
                             height: 480
                         }
                     }} />
                 }
                 {this.state.touch &&
-                    <img id="test" src="https://raw.githubusercontent.com/malaman/react-image-zoom/master/example/1.jpg" />
+                    <img id="test" src="https://www.qnap.com/solution/ifttt_agent/assets/images/app/icon_14.jpg" />
                 }
             </span>
         );
