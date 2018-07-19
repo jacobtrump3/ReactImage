@@ -28,13 +28,13 @@ class Index extends React.Component {
     handleZoom(){
         if(!this.state.zoom){
             // zoom in
-            document.body.style.zoom=2.0;
+            document.getElementsByClassName('modal-content')[0].style.width = '200%';
             this.setState({
                 zoom: true
             });
         } else {
             // zoom out
-            document.body.style.zoom=1.0;
+            document.getElementsByClassName('modal-content')[0].style.width = '80%';
             this.setState({
                 zoom: false
             });
@@ -68,7 +68,7 @@ class Index extends React.Component {
                             {/* The Close Button */}
                             <span onClick={this.handleClose} className="close">&times;</span>
                             {/* Modal Content (The Image) */}
-                            <img onDoubleClick={this.handleZoom} className="modal-content" id="img01" src="https://www.qnap.com/solution/ifttt_agent/assets/images/app/icon_14.jpg"/>
+                            <img style={{}} onDoubleClick={this.handleZoom} className="modal-content" id="img01" src="https://www.qnap.com/solution/ifttt_agent/assets/images/app/icon_14.jpg"/>
                             {/* Modal Caption (Image Text) */}
                             <div id="caption">GitHub</div>
                         </div>
