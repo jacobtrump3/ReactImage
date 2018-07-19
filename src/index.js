@@ -1,24 +1,44 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './index.css';
-
 import ReactImageMagnify from 'react-image-magnify';
+
+import './index.css';
 
 class Index extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             touch: (innerWidth <= 1024) ? true : false,
-            small: true
+            zoomStatus: false
         }
-        this.handleClick = this.handleClick.bind(this);
+        this.handleExpand = this.handleExpand.bind(this);
+        this.handleClose = this.handleClose.bind(this);
+        this.handleZoom = this.handleZoom.bind(this);
     }
 
-    handleClick(){
-        this.setState({
-            small: !this.state.small
-        });
+    handleExpand(){
+        document.getElementById('myModal').style.display = 'block';
+    }
+
+    handleClose(){
+        document.getElementById('myModal').style.display = 'none';
+    }
+
+    handleZoom(){
+        if(!this.state.zoom){
+            // zoom in
+            document.body.style.zoom=2.0;
+            this.setState({
+                zoom: true
+            });
+        } else {
+            // zoom out
+            document.body.style.zoom=1.0;
+            this.setState({
+                zoom: false
+            });
+        }
     }
 
     render() {
@@ -33,20 +53,26 @@ class Index extends React.Component {
                         },
                         largeImage: {
                             src: 'https://www.qnap.com/solution/ifttt_agent/assets/images/app/icon_14.jpg',
-                            width: 480,
-                            height: 480
+                            width: 720,
+                            height: 720
                         }
                     }} />
                 }
                 {
                     this.state.touch &&
-                    this.state.small &&
-                    <img onClick={this.handleClick} src="https://www.qnap.com/solution/ifttt_agent/assets/images/app/icon_14.jpg" />
-                }
-                {
-                    this.state.touch &&
-                    !this.state.small &&
-                    <img style={{width: innerWidth, height: innerHeight}} onClick={this.handleClick} src="https://www.qnap.com/solution/ifttt_agent/assets/images/app/icon_14.jpg" />
+                    <div>
+                        {/* Trigger the Modal */}
+                        <img onDoubleClick={this.handleExpand} style={{ width: '100%', maxWidth: '240px' }} id='myImg' alt='github' src="https://www.qnap.com/solution/ifttt_agent/assets/images/app/icon_14.jpg" />
+                        {/* The Modal */}
+                        <div id="myModal" className="modal">
+                            {/* The Close Button */}
+                            <span onClick={this.handleClose} className="close">&times;</span>
+                            {/* Modal Content (The Image) */}
+                            <img onDoubleClick={this.handleZoom} className="modal-content" id="img01" src="https://www.qnap.com/solution/ifttt_agent/assets/images/app/icon_14.jpg"/>
+                            {/* Modal Caption (Image Text) */}
+                            <div id="caption">GitHub</div>
+                        </div>
+                    </div>
                 }
             </span>
         );

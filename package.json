@@ -34,9 +34,6 @@
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-image-magnify": "^2.7.0",
-    "react-medium-image-zoom": "^3.0.12",
-    "react-touch-events": "^2.1.0",
-    "zooming": "^2.1.0"
+    "react-image-magnify": "^2.7.0"
   }
 }
