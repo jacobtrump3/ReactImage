@@ -22,6 +22,7 @@ class Index extends React.Component {
     }
 
     handleClose(){
+        document.getElementsByClassName('modal-content')[0].style.width = '80%';
         document.getElementById('myModal').style.display = 'none';
     }
 
