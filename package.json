@@ -34,6 +34,8 @@
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-image-magnify": "^2.7.0"
+    "react-hammerjs": "^1.0.1",
+    "react-image-magnify": "^2.7.0",
+    "react-pinch-zoom-pan": "^1.4.5"
   }
 }

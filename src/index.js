@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import { PinchView } from 'react-pinch-zoom-pan';
 import ReactImageMagnify from 'react-image-magnify';
 
 import './index.css';
+import ReactPinchZoomPan from 'react-pinch-zoom-pan/lib/ReactPinchZoomPan';
 
 class Index extends React.Component {
     constructor(props) {
@@ -44,38 +45,43 @@ class Index extends React.Component {
 
     render() {
         return (
-            <span>
-                {!this.state.touch &&
-                    <ReactImageMagnify {...{
-                        smallImage: {
-                            src: 'https://www.qnap.com/solution/ifttt_agent/assets/images/app/icon_14.jpg',
-                            width: 240,
-                            height: 240
-                        },
-                        largeImage: {
-                            src: 'https://www.qnap.com/solution/ifttt_agent/assets/images/app/icon_14.jpg',
-                            width: 720,
-                            height: 720
+            <ReactPinchZoomPan maxScale={2} render={obj => {
+                return(
+                    <span>
+                        {!this.state.touch &&
+                            <ReactImageMagnify {...{
+                                smallImage: {
+                                    src: 'https://www.qnap.com/solution/ifttt_agent/assets/images/app/icon_14.jpg',
+                                    width: 240,
+                                    height: 240
+                                },
+                                largeImage: {
+                                    src: 'https://www.qnap.com/solution/ifttt_agent/assets/images/app/icon_14.jpg',
+                                    width: 720,
+                                    height: 720
+                                }
+                            }} />
                         }
-                    }} />
-                }
-                {
-                    this.state.touch &&
-                    <div>
-                        {/* Trigger the Modal */}
-                        <img onDoubleClick={this.handleExpand} style={{ width: '100%', maxWidth: '240px' }} id='myImg' alt='github' src="https://www.qnap.com/solution/ifttt_agent/assets/images/app/icon_14.jpg" />
-                        {/* The Modal */}
-                        <div id="myModal" className="modal">
-                            {/* The Close Button */}
-                            <span onClick={this.handleClose} className="close">&times;</span>
-                            {/* Modal Content (The Image) */}
-                            <img style={{}} onDoubleClick={this.handleZoom} className="modal-content" id="img01" src="https://www.qnap.com/solution/ifttt_agent/assets/images/app/icon_14.jpg"/>
-                            {/* Modal Caption (Image Text) */}
-                            <div id="caption">GitHub</div>
-                        </div>
-                    </div>
-                }
-            </span>
+                        {
+                            this.state.touch &&
+                            <div>
+                                {/* Trigger the Modal */}
+                                <img onDoubleClick={this.handleExpand} style={{ width: '100%', maxWidth: '240px' }} id='myImg' alt='github' src="https://www.qnap.com/solution/ifttt_agent/assets/images/app/icon_14.jpg" />
+                                {/* The Modal */}
+
+                                    <div id="myModal" className="modal">
+                                        {/* The Close Button */}
+                                        <span onClick={this.handleClose} className="close">&times;</span>
+                                        {/* Modal Content (The Image) */}
+                                        <img style={{}} onDoubleClick={this.handleZoom} className="modal-content" id="img01" src="https://www.qnap.com/solution/ifttt_agent/assets/images/app/icon_14.jpg"/>
+                                        {/* Modal Caption (Image Text) */}
+                                        <div id="caption">GitHub</div>
+                                    </div>
+                            </div>
+                        }
+                    </span>
+                )
+            }}/>
         );
     }
 }
